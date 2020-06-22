@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/out.js"></script>
+<script type="text/javascript">
+	var count = 0
+	function add() {
+		count++;
+		divTag = document.querySelector("#div");
+		divTag.textContent = count;
+		//태그의 열고 닫고 사이에 들어가는 content
+	}
+	function minus() {
+		count--;
+		divTag = document.querySelector("#div");
+		divTag.textContent = count;
+		
+	}
+	function reset() {
+		count = 0;
+		divTag = document.querySelector("#div");
+		divTag.textContent = count;
+		
+	}
+	
+</script>
+</head>
+<body>
+<input type="button" value="1씩 증가" id="add" onclick="add()"><br>
+<input type="button" value="1씩 감수" id="minus" onclick="minus()"><br>
+<input type="button" value="초기화" id="reset" onclick="reset()"><br>
+<div id="div" style="color: red ; background: yellow;"> 여기 출력될 위치</div>
+<br>
+<button onclick="call5()"> 외부 js파일 호출</button>
+</body>
+</html>

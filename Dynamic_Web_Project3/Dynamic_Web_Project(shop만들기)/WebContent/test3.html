@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	sum = 0
+	function plus() {
+		sum = sum + 1
+		document.querySelector("#result").value = sum
+		console.log(sum)
+	}
+	function minus() {
+		sum = sum - 1
+		document.querySelector("#result").value = sum
+		console.log(sum)
+	}
+	function zero() {
+		sum = 0
+		document.querySelector("#result").value = sum
+		console.log(sum)
+	}
+	
+	
+</script>
+</head>
+<body>
+
+<button type="button" onclick="plus()">+1하기</button>
+<button type="button" onclick="minus()">-1하기</button>
+<button type="button" onclick="zero()">0으로 초기화</button>
+결과 값 <input style='color:red' type="text" name="result" id="result">
+</body>
+</html>

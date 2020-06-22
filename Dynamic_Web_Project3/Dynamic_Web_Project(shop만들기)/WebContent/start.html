@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			body{
+				color : blue;
+			}
+		</style>
+		<script type="text/javascript">
+			function call(){
+				//today에 무엇으로 입력했는지 가지고 와서 확인.
+				//Selector(선택자): tagName , attr , id , class
+				// 그냥쓰면 태그 , 점찍으면 클래스 , 샾은 아이디
+				//var tag = document.querySelector("input");	tag
+				//var tag = document.querySelector("input[type=text]");	attr
+				//var tag = document.querySelector("#today");	id
+				//var tag = document.querySelector(".today");	class
+				var tags = document.querySelectorAll(".today"); //결과가 여러개 인것 , 반환이 배열로 가지고 온다.	
+				//tag들이 들어있는 배열
+				// tag = $("input")
+				alert(tags[0].value); //-> 배열로 가져오기때문에 인덱스를 부여해서 가져와야한다.
+				if(tag.value=='월요일'){
+					console.log('힘든 한주의 시작이군요.')
+				}else {
+					console.log('한주가 시작이 벌써 되었군요.')
+				}
+				
+			}
+		
+		</script>
+	</head>
+	<body>
+	오늘은 무슨 요일인가요?<input type="text" id="today" class ="today"> <!-- css,js에서는 name으로 지정 못함. -->
+	<button type="button" onclick="call()">나를 누르세요.</button>
+	</body>
+</html>

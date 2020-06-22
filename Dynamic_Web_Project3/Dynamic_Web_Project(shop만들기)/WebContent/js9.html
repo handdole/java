@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("#id").keyup(function() {
+		valueId = $("#id").val()
+		if (valueId.length < 5 ) {
+			$("#divid").text("5글자 이상이여야 합니다." )
+		}
+		else{
+			$("#divid").text("유요한 아이디입니다.").css('color' , 'blue')
+		}
+	})
+	
+	$("#pwre").keyup(function() {
+		valuePw = $("#pw").val()
+		valuePwre = $("#pwre").val()
+		if (valuePw != valuePwre) {
+			$("#divpwre").text("비밀번호가 같지 않습니다.")
+		}
+		else{
+			$("#divpwre").text("비밀번호 확인 완료!").css('color','blue')
+		}
+	})
+})
+</script>
+</head>
+<body>
+	<div style='font-size: medium;'>
+		아이디 : <input type="text" id="id">
+	</div>
+	<div id="divid" style="background: green; font-size:large; color:red;" ></div>
+	<div style='font-size: medium;'>
+		비밀번호 : <input type="text" id="pw">
+	</div>
+	<div id="divpw" style="background: green; font-size:large;"></div>
+	<div style='font-size: medium;'>
+		비밀번호확인: <input type="text" id="pwre">
+	</div>
+	<div id="divpwre" style="background: green; font-size:large;"></div>
+</body>
+</html>

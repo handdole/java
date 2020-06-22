@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function plus() {
+		Num1 = document.querySelector("#num1")
+		Num2 = document.querySelector("#num2")
+		
+		num1Value = parseInt(Num1.value)
+		num2Value = parseInt(Num2.value)
+		result = num1Value + num2Value
+		
+		return result
+	}
+	function minus() {
+		Num1 = document.querySelector("#num1")
+		Num2 = document.querySelector("#num2")
+		
+		num1Value = parseInt(Num1.value)
+		num2Value = parseInt(Num2.value)
+		result = num1Value - num2Value
+		
+		return result
+	}
+	function div() {
+		Num1 = document.querySelector("#num1")
+		Num2 = document.querySelector("#num2")
+		
+		num1Value = parseInt(Num1.value)
+		num2Value = parseInt(Num2.value)
+		result = num1Value / num2Value
+		
+		return result
+	}
+	function mult() {
+		Num1 = document.querySelector("#num1")
+		Num2 = document.querySelector("#num2")
+		
+		num1Value = parseInt(Num1.value)
+		num2Value = parseInt(Num2.value)
+		result = num1Value * num2Value
+		
+		return result
+	}
+	function result2() {
+		Oper = document.querySelector("#oper")
+		operValue = Oper.value
+		if(operValue == '+'){
+			var result = plus()
+			alert("결과는 " + result + "입니다.")
+		}
+		else if (operValue == '-') {
+			var result = minus()
+			alert("결과는 " + result + "입니다.")
+		}
+		else if (operValue == '/') {
+			var result = div()
+			alert("결과는 " + result + "입니다.")
+		}
+		else if(operValue == '*') {
+			console.log(operValue)
+			var result = mult()
+			alert("결과는 " + result + "입니다.")
+		}
+		else {
+			alert("잘 못 입력하셨습니다.")
+		}
+		
+	}
+
+</script>
+</head>
+<body>
+첫번째 수 입력 <input type="text" id="num1"><br>
+두번째 수 입력 <input type="text" id="num2"><br>
+더하기 빼기 나누기 곱하기 중 하나 선택!( + , - , / , * )<input type="text" id="oper" >
+
+<button type="button" onclick="result2()">출력!</button>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(function() {
+	//버튼을 클릭했을 때
+	$("#button").click(function() {
+		//댓글 쓴 내용을 가져와야됨.
+		var data = $("#reply").val()   //input 태그의 값은 val()사용
+		//div에 계속 추가해야함.
+		$('div').append( '-'+ data  + '<br>')
+	}) 
+})
+
+</script>
+</head>
+<body>
+댓글 : <input type="text" id="reply">
+	<input type="button" id="button" value="댓글추가"><br>
+<div></div>
+</body>
+</html>

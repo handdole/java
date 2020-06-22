@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function print() {
+		Name = document.querySelector("#name")
+		Tel = document.querySelector("#tel")
+		nameValue = Name.value
+		telValue = Tel.value
+		
+		alert('이름은 : ' + nameValue)
+		alert('휴대폰 번호는 : ' + telValue)
+	}
+</script>
+
+
+</head>
+<body>
+이름 입력 <input type="text" id="name"><br>
+휴대폰 번호 입력 <input type="text" id="tel"><br>
+<button type="button" onclick="print()">출력!</button>
+</body>
+</html>

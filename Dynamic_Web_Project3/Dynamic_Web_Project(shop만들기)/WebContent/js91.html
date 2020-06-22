@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("#id").keyup(function() {
+			list = ["root", "admin" , "manager"]  //문자로 인식하게 "" 꼭 붙이기
+			valueId = $("#id").val()
+			
+			
+			
+			if (valueId == list[0] || valueId == list[1] ||valueId == list[2]) {
+				$("#div").text("로그인이 가능한 아이디입니다.").css('color','green')
+			}
+			else {
+				$("#div").text("로그인이 불가능합니다.").css('color','red')
+			}
+		})
+})
+</script>
+</head>
+<body>
+	아이디 : <input type=text id=id>
+	<div id="div" style="background: black ; font-size: 30px;"></div>
+</body>
+</html>

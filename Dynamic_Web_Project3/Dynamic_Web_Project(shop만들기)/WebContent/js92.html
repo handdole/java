@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("#num").keyup(function() {
+		num1 = parseInt($("#num").val())
+		if (num1>55) {
+			$("#div").text("너무 큽니다.")
+		}
+		else if (num1<55) {
+			$("#div").text("너무 작습니다.")
+		}
+		else {
+			
+			$("#div").text("정답입니다.")
+		}
+	})
+})
+</script>
+</head>
+<body>
+	숫자 게임: <input type="text" id="num">
+	<div id=div></div>
+</body>
+</html>
