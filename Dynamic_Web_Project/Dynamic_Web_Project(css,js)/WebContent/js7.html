@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function f1() {
+				x = document.getElementById("x");
+				y = document.getElementById("y");
+				X = x.value;
+				Y = y.value;
+				if (X > Y) {
+					alert("영희가 큼요")
+				}else if (X == Y) {
+					alert("둘이같네요")
+				} 
+				else {
+					alert("철수가 큼요")
+				}
+				x.value = '';
+				y.value = '';
+				
+			}
+		</script>
+	</head>
+	<body>
+		영희는 숫자 몇? <input type="text" name="id" id="x">
+		<br>
+		철수는 숫자 몇? <input type="text" name="id" id="y">
+		<br>
+		<button onclick="f1()">누가 누가 더 클까요?</button>
+	</body>
+</html>

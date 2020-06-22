@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('#b1').click(function() {
+		$.ajax({
+			url : 'data/member2.xml',
+			success : function(doc) {
+				console.log("xml불러오는 ajax 성공")
+				list = $(doc).find("record")
+				$(list).each(function() {
+					nameValue = $(this).find('name').text()
+					ageValue = $(this).find('age').text()
+					companyValue = $(this).find('company').text()
+					telValue = $(this).find('tel').text()
+					locValue = $(this).find('loc').text()
+					appnameValue = $(this).find('appname').text()
+					$.ajax({
+						url : 'db2.jsp',
+						data : {
+							name : nameValue,
+							age : ageValue,
+							company : companyValue,
+							tel : telValue,
+							loc : locValue,
+							appname : appnameValue
+						},
+						success : function() {
+							console.log("jsp에 전송 완료.")
+						}
+						
+						
+					})
+				})
+			}
+			
+		})
+	})
+	
+	
+})
+
+</script>
+</head>
+<body>
+<button id='b1'>DB로 넣어버리기</button>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('#b1').click(function () {
+		//xml이 있는 주소로 ajax통신하면 됨.
+		$.ajax({
+			url : 'data/rank.xml' ,
+			success: function(doc) {
+				console.log('xml연결 성공!!')
+				console.log('xml 결과 :' + doc)
+				list = $(doc).find('rank');
+				//list = $(doc).find('name');
+				if (list.length >0) {
+					//alert('rank가 여러개 있어요')
+					//for (var i = 0; i < list.length; i++) {
+						//console.log($(list[i]).text())
+						//console.log($(list[i]).find('tel').text())
+						//alert($(list[i]).find('name').text())
+						//alert($(list[i]).text())
+					//}
+					$(list).each(function() {
+						name = $(this).find('name').text()
+						tel = $(this).find('tel').text()
+						console.log('name : ' + name + ' tel : '+ tel)
+						$('#d1').append('name : ' + name + ' tel : '+ tel + '<br>')
+					})
+				}
+				}
+		})
+	})
+	$('#b2').click(function() {
+		//JSON이 있는 주소로 ajax통신하면 됨.
+		$.ajax({
+			url : 'data/member.json' ,
+			success: function(result) {
+				console.log('json연결 성공!!')
+				console.log('json 결과 :' + result)
+				}
+		})
+	})
+	$('#b3').click(function() {
+		$.ajax({
+			url : 'data/member.xml',
+			success : function(member) {
+				list = $(member).find('record')
+				$(list).each(function() {
+					name = $(this).find('name').text()
+					age = $(this).find('age').text()
+					company = $(this).find('company').text()
+					tel = $(this).find('tel').text()
+					$('#d1').append('name: ' + name + ' age : '+age+' company : '+company+' tel : '+tel+'<br>')
+				})
+			}
+			
+		})
+		
+	})
+	
+})
+
+</script>
+</head>
+<body>
+<button id="b1">XML파일 읽어오기</button>
+<button id="b2">JSON파일 읽어오기</button>
+<button id="b3">member.xml 읽어오기</button>
+<hr>
+<div id=d1></div>
+</body>
+</html>

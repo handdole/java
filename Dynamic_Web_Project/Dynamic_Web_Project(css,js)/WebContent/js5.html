@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			//X = prompt("x값 입력");
+			//Y = prompt("y값 입력");
+			//x = parseInt(X);
+			//y = parseInt(Y);
+			function f1() {
+				alert(x+y)
+			}
+			function f2(){
+				for (var i = x; i <= y; i++) {
+					x = x+i;
+				}
+				alert(x);
+			}
+
+			
+			function login() {
+				id = "park";
+				pw = parseInt("1234");
+				ID = prompt("아이디는?");
+				PW = prompt("비밀번호는?");
+				PW1 = parseInt(PW);
+				if (id==ID && pw==PW1) {
+					alert("OK")
+				} else {
+					alert("NO")
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<button onclick="f1()">x+y는?</button>
+		<button onclick="f2()">x부터 y까지 합은?</button>
+		<button onclick="login()">로그인</button>
+	</body>
+</html>

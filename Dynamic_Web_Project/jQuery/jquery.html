@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+//함수 호출방식 : call-back호출방식
+$(function() {
+	//id가 b1인 것이 클릭되었을 때 옆에 있는 
+	//함수 부분을 실행시켜주세요..!
+	$('#b1').click(function() {
+		alert("콜백함수 호출됨.")
+		$('body').append("나는자식")
+	})
+})  //document.ready()
+</script>
+</head>
+<body>
+<button type="button" id="b1">콜백 함수 호출</button>
+</body>
+</html>
