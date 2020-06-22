@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="css/member.css"/> 
+	</head>
+	<body>
+		<h1>회원가입화면입니다.</h1>
+		<hr>
+		<form action="member.jsp">
+			<table border="1" align="center">
+				<tr>
+					<td class="c1">아이디:</td>
+					<td><input type="text" name="id" class="inputs"></td>
+				</tr>
+				<tr>
+					<td class="c1">패스워드:</td>
+					<td><input type="text" name="pw" class="inputs"></td>
+				</tr>
+				<tr>
+					<td class="c1">이름: </td>
+					<td><input type="text" name="name" class="inputs"></td>
+				</tr>
+				<tr>
+					<td class="c1">연락처:</td>
+					<td>
+						<select name="com">
+							<option value="011">011
+							<option value="017">017
+							<option value="019">019
+							<option value="010" selected="selected">010
+							<option value="016">016
+						</select> 
+						<input type="text" name="tel" class="inputs">
+					</td>
+				</tr>
+				<tr>
+					<td class="c1">성별:</td>
+					<td>
+						<input type="radio" name="gender" value="man" checked="checked">남자 
+						<input type="radio" name="gender" value="woman">여자  
+					</td>
+				</tr>
+				<tr>
+					<td class="c1">취미:</td>
+					<td>
+						<input type="checkbox" name="hobby" value="run">달리기
+						<input type="checkbox" name="hobby" value="game">게임
+						<input type="checkbox" name="hobby" value="read">독서
+						<input type="checkbox" name="hobby" value="study">공부
+						<input type="checkbox" name="hobby" value="music">음악 
+					</td>
+				</tr>
+				<tr>
+					<td class="c1">하고 싶은 말: </td>
+					<td><textarea rows="5" cols="20" name="word" class="inputs"></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2" id="button"><input type="submit" value="회원가입 완료"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
+
+
+
+

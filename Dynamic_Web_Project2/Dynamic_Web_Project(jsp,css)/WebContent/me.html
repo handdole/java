@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<form action="info.jsp">
+		<!-- form 안에 넣어야함. 오류나면 체크 해봐야함. -->	
+		<!-- 폼을 만들어서 보내줌. -->
+			이름 : <input type="text" name="name"><br>
+			나이 : <input type="text" name="age"><br>
+			소속 : <input type="text" name="company"><br>
+			연락처 : <input type="text" name="number"><br>
+			<input type="submit" value="회원가입완료">
+		</form>
+		<hr>
+		<!-- 주소를 만들어서 보내줌. -->
+		<a href="info.jsp?name=hong&age=100">서버로 전송2</a>
+	</body>
+</html>

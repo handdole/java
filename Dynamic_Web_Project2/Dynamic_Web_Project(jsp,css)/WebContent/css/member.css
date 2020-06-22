@@ -1,0 +1,29 @@
+@charset "UTF-8";
+body{
+	color: blue;
+}
+
+.inputs{
+	background: yellow;
+	width : 250px
+}
+
+.c1{
+	text-align: center;
+	background: pink;	
+}
+
+#button{
+	background: green;
+	color : white;
+	font-size: 50px;
+	text-align: center;
+}
+h1{
+	text-align: center;
+	color: red;
+	font-style: italic;
+	font-weight: bold;
+	border-style: dotted;
+	border-width: 5px;
+}

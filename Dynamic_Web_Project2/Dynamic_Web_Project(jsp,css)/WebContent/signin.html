@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+	<h1>회원가입 화면입니다.</h1>
+	<hr color="red" size="5">
+		<form action="signinfo.jsp">
+			아이디 : <input type="text" name="id"> <br>
+			패스워드 : <input type="text" name="password"> <br> 
+			이름 : <input type="text" name="name"><br> 
+			연락처 : <select name="com">
+			<option value="011">011
+			<option value="017">017
+			<option value="019">019
+			<option value="018">018
+			<option value="010" selected="selected">010
+			</select>
+			<input type="text" name="tel"><br>
+			성별: <input type="radio" name="gender" value="man" checked="checked">남자
+				<input type="radio" name="gender" value="woman" >여자 <br>
+			취미: <input type="checkbox" name="hobby" value="달리기">달리기
+				<input type="checkbox" name="hobby" value="게임">게임
+				<input type="checkbox" name="hobby" value="독서">독서
+				<input type="checkbox" name="hobby" value="공부">공부
+				<input type="checkbox" name="hobby" value="음악">음악<br>
+			하고싶은말 :
+				<textarea rows="5" cols="20" name="word">
+				</textarea><br>			
+			<input type="submit" value="서버로전송">
+		</form>
+	</body>
+</html>
