@@ -1,3 +1,5 @@
+//20200623 v1.0 주석 추가
+
 package 제너릭프로그램;
 
 import java.util.ArrayList;
@@ -14,6 +16,7 @@ public class 리스트테스트 {
 		System.out.println(list);
 		
 		ArrayList<Integer> int3 = new ArrayList<Integer>();
+		//integer로 선언했을 경우 int형만 리스트에 들어갈 수 있다.
 		int3.add(100);
 		int3.add(2);
 		int3.add(40);
