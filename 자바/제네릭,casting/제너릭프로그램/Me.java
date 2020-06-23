@@ -1,9 +1,13 @@
+//v1.1 20200623 주석 추가
+
 package 제너릭프로그램;
 
 import java.util.ArrayList;
 
 public class Me {
 	public static void main(String[] args) {
+		//arraylist를 만들 때 형을 선언하지 않으면 어떤 형이 들어가도 상관없다.
+		//default로 object 형으로 들어감
 		ArrayList list = new ArrayList();
 		list.add("박한솔");
 		list.add(26);
@@ -13,6 +17,8 @@ public class Me {
 		
 		System.out.println(list);
 		
+		//arraylist에서는 object형이고 따로 어떤 변수에 넣을 때는 
+		//downcasting해서 변수에 넣어줘야 한다.
 		String name = (String)list.get(0);
 		int age = (Integer)list.get(1) + 1;
 		double eye = (Double)list.get(2) + 0.2;
